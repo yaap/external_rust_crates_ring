@@ -21,6 +21,11 @@ rust_library {
     static_libs: [
         "libring-core",
     ],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.resolv",
+    ],
+    min_sdk_version: "29",
 }
 
 rust_defaults {
@@ -138,6 +143,11 @@ cc_library_static {
         "-DNDEBUG",
     ],
     local_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.resolv",
+    ],
+    min_sdk_version: "29",
 }
 
 cc_library_static {
