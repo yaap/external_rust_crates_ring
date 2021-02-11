@@ -2,36 +2,16 @@
 {
   "presubmit": [
     {
-      "host": true,
-      "name": "ring_host_test_src_lib"
-    },
-    {
       "name": "ring_device_test_src_lib"
-    },
-    {
-      "host": true,
-      "name": "ring_host_test_tests_aead_tests"
     },
     {
       "name": "ring_device_test_tests_aead_tests"
     },
     {
-      "host": true,
-      "name": "ring_host_test_tests_agreement_tests"
-    },
-    {
       "name": "ring_device_test_tests_agreement_tests"
     },
     {
-      "host": true,
-      "name": "ring_host_test_tests_constant_time_tests"
-    },
-    {
       "name": "ring_device_test_tests_constant_time_tests"
-    },
-    {
-      "host": true,
-      "name": "ring_host_test_tests_digest_tests"
     },
     {
       "name": "ring_device_test_tests_digest_tests",
@@ -42,64 +22,28 @@
       ]
     },
     {
-      "host": true,
-      "name": "ring_host_test_tests_ecdsa_tests"
-    },
-    {
       "name": "ring_device_test_tests_ecdsa_tests"
-    },
-    {
-      "host": true,
-      "name": "ring_host_test_tests_ed25519_tests"
     },
     {
       "name": "ring_device_test_tests_ed25519_tests"
     },
     {
-      "host": true,
-      "name": "ring_host_test_tests_hkdf_tests"
-    },
-    {
       "name": "ring_device_test_tests_hkdf_tests"
-    },
-    {
-      "host": true,
-      "name": "ring_host_test_tests_hmac_tests"
     },
     {
       "name": "ring_device_test_tests_hmac_tests"
     },
     {
-      "host": true,
-      "name": "ring_host_test_tests_pbkdf2_tests"
-    },
-    {
       "name": "ring_device_test_tests_pbkdf2_tests"
-    },
-    {
-      "host": true,
-      "name": "ring_host_test_tests_quic_tests"
     },
     {
       "name": "ring_device_test_tests_quic_tests"
     },
     {
-      "host": true,
-      "name": "ring_host_test_tests_rand_tests"
-    },
-    {
       "name": "ring_device_test_tests_rand_tests"
     },
     {
-      "host": true,
-      "name": "ring_host_test_tests_rsa_tests"
-    },
-    {
       "name": "ring_device_test_tests_rsa_tests"
-    },
-    {
-      "host": true,
-      "name": "ring_host_test_tests_signature_tests"
     },
     {
       "name": "ring_device_test_tests_signature_tests"
