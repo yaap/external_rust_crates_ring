@@ -1,0 +1,13 @@
+{
+  "apex-available": [
+    "//apex_available:platform",
+    "com.android.resolv"
+  ],
+  "dependencies": true,
+  "device": true,
+  "features": "alloc,default,dev_urandom_fallback,once_cell,std",
+  "min-sdk-version": "29",
+  "patch": "patches/Android.bp.diff",
+  "run": true,
+  "tests": true
+}
