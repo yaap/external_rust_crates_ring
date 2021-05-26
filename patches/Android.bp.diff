@@ -1,16 +1,11 @@
 --- Android.bp.old	2020-12-14 18:12:19.236831007 +0900
 +++ Android.bp	2020-12-14 18:12:26.756763208 +0900
-@@ -20,8 +20,12 @@ rust_library {
+@@ -20,8 +20,7 @@ rust_library {
      ],
      static_libs: [
          "libring-core",
 -        "libring-test",
      ],
-+    apex_available: [
-+        "//apex_available:platform",
-+        "com.android.resolv",
-+    ],
-+    min_sdk_version: "29",
  }
  
  rust_defaults {
