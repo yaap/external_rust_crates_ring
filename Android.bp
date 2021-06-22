@@ -452,6 +452,11 @@ cc_library_static {
         "crypto/constant_time_test.c",
     ],
     local_include_dirs: ["include"],
+    apex_available: [
+        "//apex_available:platform",
+        "com.android.resolv",
+    ],
+    min_sdk_version: "29",
 }
 
 // dependent_library ["feature_list"]
