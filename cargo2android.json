@@ -10,5 +10,6 @@
   "features": "alloc,default,dev_urandom_fallback,once_cell,std",
   "min-sdk-version": "29",
   "run": true,
-  "tests": true
+  "tests": true,
+  "patch": "patches/whole_static_libs.patch"
 }
