@@ -11,5 +11,8 @@
   "min-sdk-version": "29",
   "run": true,
   "tests": true,
-  "patch": "patches/whole_static_libs.patch"
+  "whole-static-libs": [
+    "ring-core",
+    "ring-test"
+  ]
 }
