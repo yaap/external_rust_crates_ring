@@ -54,7 +54,7 @@ rust_library {
         "libspin",
         "libuntrusted",
     ],
-    static_libs: [
+    whole_static_libs: [
         "libring-core",
     ],
     apex_available: [
