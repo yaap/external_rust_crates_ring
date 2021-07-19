@@ -36,7 +36,6 @@ license {
 
 rust_library {
     name: "libring",
-    // has rustc warnings
     host_supported: true,
     crate_name: "ring",
     srcs: ["src/lib.rs"],
@@ -69,7 +68,6 @@ rust_library {
 rust_defaults {
     name: "ring_defaults",
     crate_name: "ring",
-    // has rustc warnings
     srcs: ["src/lib.rs"],
     test_suites: ["general-tests"],
     auto_gen_config: true,
@@ -131,7 +129,6 @@ rust_defaults {
 rust_test_host {
     name: "ring_host_test_tests_aead_tests",
     defaults: ["ring_defaults_ring"],
-    // has rustc warnings
     srcs: ["tests/aead_tests.rs"],
     test_options: {
         unit_test: true,
@@ -141,14 +138,12 @@ rust_test_host {
 rust_test {
     name: "ring_device_test_tests_aead_tests",
     defaults: ["ring_defaults_ring"],
-    // has rustc warnings
     srcs: ["tests/aead_tests.rs"],
 }
 
 rust_test_host {
     name: "ring_host_test_tests_agreement_tests",
     defaults: ["ring_defaults_ring"],
-    // has rustc warnings
     srcs: ["tests/agreement_tests.rs"],
     test_options: {
         unit_test: true,
@@ -158,14 +153,12 @@ rust_test_host {
 rust_test {
     name: "ring_device_test_tests_agreement_tests",
     defaults: ["ring_defaults_ring"],
-    // has rustc warnings
     srcs: ["tests/agreement_tests.rs"],
 }
 
 rust_test_host {
     name: "ring_host_test_tests_constant_time_tests",
     defaults: ["ring_defaults_ring"],
-    // has rustc warnings
     srcs: ["tests/constant_time_tests.rs"],
     test_options: {
         unit_test: true,
@@ -175,14 +168,12 @@ rust_test_host {
 rust_test {
     name: "ring_device_test_tests_constant_time_tests",
     defaults: ["ring_defaults_ring"],
-    // has rustc warnings
     srcs: ["tests/constant_time_tests.rs"],
 }
 
 rust_test_host {
     name: "ring_host_test_tests_digest_tests",
     defaults: ["ring_defaults_ring"],
-    // has rustc warnings
     srcs: ["tests/digest_tests.rs"],
     test_options: {
         unit_test: true,
@@ -192,14 +183,12 @@ rust_test_host {
 rust_test {
     name: "ring_device_test_tests_digest_tests",
     defaults: ["ring_defaults_ring"],
-    // has rustc warnings
     srcs: ["tests/digest_tests.rs"],
 }
 
 rust_test_host {
     name: "ring_host_test_tests_ecdsa_tests",
     defaults: ["ring_defaults_ring"],
-    // has rustc warnings
     srcs: ["tests/ecdsa_tests.rs"],
     test_options: {
         unit_test: true,
@@ -209,14 +198,12 @@ rust_test_host {
 rust_test {
     name: "ring_device_test_tests_ecdsa_tests",
     defaults: ["ring_defaults_ring"],
-    // has rustc warnings
     srcs: ["tests/ecdsa_tests.rs"],
 }
 
 rust_test_host {
     name: "ring_host_test_tests_ed25519_tests",
     defaults: ["ring_defaults_ring"],
-    // has rustc warnings
     srcs: ["tests/ed25519_tests.rs"],
     test_options: {
         unit_test: true,
@@ -226,14 +213,12 @@ rust_test_host {
 rust_test {
     name: "ring_device_test_tests_ed25519_tests",
     defaults: ["ring_defaults_ring"],
-    // has rustc warnings
     srcs: ["tests/ed25519_tests.rs"],
 }
 
 rust_test_host {
     name: "ring_host_test_tests_hkdf_tests",
     defaults: ["ring_defaults_ring"],
-    // has rustc warnings
     srcs: ["tests/hkdf_tests.rs"],
     test_options: {
         unit_test: true,
@@ -243,14 +228,12 @@ rust_test_host {
 rust_test {
     name: "ring_device_test_tests_hkdf_tests",
     defaults: ["ring_defaults_ring"],
-    // has rustc warnings
     srcs: ["tests/hkdf_tests.rs"],
 }
 
 rust_test_host {
     name: "ring_host_test_tests_hmac_tests",
     defaults: ["ring_defaults_ring"],
-    // has rustc warnings
     srcs: ["tests/hmac_tests.rs"],
     test_options: {
         unit_test: true,
@@ -260,14 +243,12 @@ rust_test_host {
 rust_test {
     name: "ring_device_test_tests_hmac_tests",
     defaults: ["ring_defaults_ring"],
-    // has rustc warnings
     srcs: ["tests/hmac_tests.rs"],
 }
 
 rust_test_host {
     name: "ring_host_test_tests_pbkdf2_tests",
     defaults: ["ring_defaults_ring"],
-    // has rustc warnings
     srcs: ["tests/pbkdf2_tests.rs"],
     test_options: {
         unit_test: true,
@@ -277,14 +258,12 @@ rust_test_host {
 rust_test {
     name: "ring_device_test_tests_pbkdf2_tests",
     defaults: ["ring_defaults_ring"],
-    // has rustc warnings
     srcs: ["tests/pbkdf2_tests.rs"],
 }
 
 rust_test_host {
     name: "ring_host_test_tests_quic_tests",
     defaults: ["ring_defaults_ring"],
-    // has rustc warnings
     srcs: ["tests/quic_tests.rs"],
     test_options: {
         unit_test: true,
@@ -294,14 +273,12 @@ rust_test_host {
 rust_test {
     name: "ring_device_test_tests_quic_tests",
     defaults: ["ring_defaults_ring"],
-    // has rustc warnings
     srcs: ["tests/quic_tests.rs"],
 }
 
 rust_test_host {
     name: "ring_host_test_tests_rand_tests",
     defaults: ["ring_defaults_ring"],
-    // has rustc warnings
     srcs: ["tests/rand_tests.rs"],
     test_options: {
         unit_test: true,
@@ -311,14 +288,12 @@ rust_test_host {
 rust_test {
     name: "ring_device_test_tests_rand_tests",
     defaults: ["ring_defaults_ring"],
-    // has rustc warnings
     srcs: ["tests/rand_tests.rs"],
 }
 
 rust_test_host {
     name: "ring_host_test_tests_rsa_tests",
     defaults: ["ring_defaults_ring"],
-    // has rustc warnings
     srcs: ["tests/rsa_tests.rs"],
     test_options: {
         unit_test: true,
@@ -328,14 +303,12 @@ rust_test_host {
 rust_test {
     name: "ring_device_test_tests_rsa_tests",
     defaults: ["ring_defaults_ring"],
-    // has rustc warnings
     srcs: ["tests/rsa_tests.rs"],
 }
 
 rust_test_host {
     name: "ring_host_test_tests_signature_tests",
     defaults: ["ring_defaults_ring"],
-    // has rustc warnings
     srcs: ["tests/signature_tests.rs"],
     test_options: {
         unit_test: true,
@@ -345,7 +318,6 @@ rust_test_host {
 rust_test {
     name: "ring_device_test_tests_signature_tests",
     defaults: ["ring_defaults_ring"],
-    // has rustc warnings
     srcs: ["tests/signature_tests.rs"],
 }
 
@@ -415,6 +387,7 @@ cc_library_static {
                 "pregenerated/aesni-gcm-x86_64-elf.S",
                 "pregenerated/aesni-x86_64-elf.S",
                 "pregenerated/chacha-x86_64-elf.S",
+                "pregenerated/chacha20_poly1305_x86_64-elf.S",
                 "pregenerated/ghash-x86_64-elf.S",
                 "pregenerated/p256-x86_64-asm-elf.S",
                 "pregenerated/sha256-x86_64-elf.S",
