@@ -2,7 +2,22 @@
 {
   "presubmit": [
     {
+      "name": "apkdmverity.test"
+    },
+    {
       "name": "doh_unit_test"
+    },
+    {
+      "name": "libapkverify.integration_test"
+    },
+    {
+      "name": "libapkverify.test"
+    },
+    {
+      "name": "libidsig.test"
+    },
+    {
+      "name": "microdroid_manager_test"
     },
     {
       "name": "quiche_device_test_src_lib"
@@ -58,6 +73,18 @@
     },
     {
       "name": "ring_device_test_tests_signature_tests"
+    },
+    {
+      "name": "virtualizationservice_device_test"
+    },
+    {
+      "name": "webpki_device_test_src_lib"
+    },
+    {
+      "name": "webpki_device_test_tests_dns_name_tests"
+    },
+    {
+      "name": "webpki_device_test_tests_integration"
     }
   ]
 }
