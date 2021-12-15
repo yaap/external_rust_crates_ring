@@ -38,6 +38,8 @@ rust_library {
     name: "libring",
     host_supported: true,
     crate_name: "ring",
+    cargo_env_compat: true,
+    cargo_pkg_version: "0.16.20",
     srcs: ["src/lib.rs"],
     edition: "2018",
     features: [
@@ -66,12 +68,18 @@ rust_library {
     min_sdk_version: "29",
 }
 
-rust_defaults {
-    name: "ring_defaults",
+rust_test {
+    name: "ring_test_src_lib",
+    host_supported: true,
     crate_name: "ring",
+    cargo_env_compat: true,
+    cargo_pkg_version: "0.16.20",
     srcs: ["src/lib.rs"],
     test_suites: ["general-tests"],
     auto_gen_config: true,
+    test_options: {
+        unit_test: true,
+    },
     edition: "2018",
     features: [
         "alloc",
@@ -92,22 +100,11 @@ rust_defaults {
     ],
 }
 
-rust_test_host {
-    name: "ring_host_test_src_lib",
-    defaults: ["ring_defaults"],
-    test_options: {
-        unit_test: true,
-    },
-}
-
-rust_test {
-    name: "ring_device_test_src_lib",
-    defaults: ["ring_defaults"],
-}
-
 rust_defaults {
-    name: "ring_defaults_ring",
+    name: "ring_test_defaults",
     crate_name: "ring",
+    cargo_env_compat: true,
+    cargo_pkg_version: "0.16.20",
     test_suites: ["general-tests"],
     auto_gen_config: true,
     edition: "2018",
@@ -127,9 +124,10 @@ rust_defaults {
     ],
 }
 
-rust_test_host {
-    name: "ring_host_test_tests_aead_tests",
-    defaults: ["ring_defaults_ring"],
+rust_test {
+    name: "ring_test_tests_aead_tests",
+    defaults: ["ring_test_defaults"],
+    host_supported: true,
     srcs: ["tests/aead_tests.rs"],
     test_options: {
         unit_test: true,
@@ -137,14 +135,9 @@ rust_test_host {
 }
 
 rust_test {
-    name: "ring_device_test_tests_aead_tests",
-    defaults: ["ring_defaults_ring"],
-    srcs: ["tests/aead_tests.rs"],
-}
-
-rust_test_host {
-    name: "ring_host_test_tests_agreement_tests",
-    defaults: ["ring_defaults_ring"],
+    name: "ring_test_tests_agreement_tests",
+    defaults: ["ring_test_defaults"],
+    host_supported: true,
     srcs: ["tests/agreement_tests.rs"],
     test_options: {
         unit_test: true,
@@ -152,14 +145,9 @@ rust_test_host {
 }
 
 rust_test {
-    name: "ring_device_test_tests_agreement_tests",
-    defaults: ["ring_defaults_ring"],
-    srcs: ["tests/agreement_tests.rs"],
-}
-
-rust_test_host {
-    name: "ring_host_test_tests_constant_time_tests",
-    defaults: ["ring_defaults_ring"],
+    name: "ring_test_tests_constant_time_tests",
+    defaults: ["ring_test_defaults"],
+    host_supported: true,
     srcs: ["tests/constant_time_tests.rs"],
     test_options: {
         unit_test: true,
@@ -167,14 +155,9 @@ rust_test_host {
 }
 
 rust_test {
-    name: "ring_device_test_tests_constant_time_tests",
-    defaults: ["ring_defaults_ring"],
-    srcs: ["tests/constant_time_tests.rs"],
-}
-
-rust_test_host {
-    name: "ring_host_test_tests_digest_tests",
-    defaults: ["ring_defaults_ring"],
+    name: "ring_test_tests_digest_tests",
+    defaults: ["ring_test_defaults"],
+    host_supported: true,
     srcs: ["tests/digest_tests.rs"],
     test_options: {
         unit_test: true,
@@ -182,14 +165,9 @@ rust_test_host {
 }
 
 rust_test {
-    name: "ring_device_test_tests_digest_tests",
-    defaults: ["ring_defaults_ring"],
-    srcs: ["tests/digest_tests.rs"],
-}
-
-rust_test_host {
-    name: "ring_host_test_tests_ecdsa_tests",
-    defaults: ["ring_defaults_ring"],
+    name: "ring_test_tests_ecdsa_tests",
+    defaults: ["ring_test_defaults"],
+    host_supported: true,
     srcs: ["tests/ecdsa_tests.rs"],
     test_options: {
         unit_test: true,
@@ -197,14 +175,9 @@ rust_test_host {
 }
 
 rust_test {
-    name: "ring_device_test_tests_ecdsa_tests",
-    defaults: ["ring_defaults_ring"],
-    srcs: ["tests/ecdsa_tests.rs"],
-}
-
-rust_test_host {
-    name: "ring_host_test_tests_ed25519_tests",
-    defaults: ["ring_defaults_ring"],
+    name: "ring_test_tests_ed25519_tests",
+    defaults: ["ring_test_defaults"],
+    host_supported: true,
     srcs: ["tests/ed25519_tests.rs"],
     test_options: {
         unit_test: true,
@@ -212,14 +185,9 @@ rust_test_host {
 }
 
 rust_test {
-    name: "ring_device_test_tests_ed25519_tests",
-    defaults: ["ring_defaults_ring"],
-    srcs: ["tests/ed25519_tests.rs"],
-}
-
-rust_test_host {
-    name: "ring_host_test_tests_hkdf_tests",
-    defaults: ["ring_defaults_ring"],
+    name: "ring_test_tests_hkdf_tests",
+    defaults: ["ring_test_defaults"],
+    host_supported: true,
     srcs: ["tests/hkdf_tests.rs"],
     test_options: {
         unit_test: true,
@@ -227,14 +195,9 @@ rust_test_host {
 }
 
 rust_test {
-    name: "ring_device_test_tests_hkdf_tests",
-    defaults: ["ring_defaults_ring"],
-    srcs: ["tests/hkdf_tests.rs"],
-}
-
-rust_test_host {
-    name: "ring_host_test_tests_hmac_tests",
-    defaults: ["ring_defaults_ring"],
+    name: "ring_test_tests_hmac_tests",
+    defaults: ["ring_test_defaults"],
+    host_supported: true,
     srcs: ["tests/hmac_tests.rs"],
     test_options: {
         unit_test: true,
@@ -242,14 +205,9 @@ rust_test_host {
 }
 
 rust_test {
-    name: "ring_device_test_tests_hmac_tests",
-    defaults: ["ring_defaults_ring"],
-    srcs: ["tests/hmac_tests.rs"],
-}
-
-rust_test_host {
-    name: "ring_host_test_tests_pbkdf2_tests",
-    defaults: ["ring_defaults_ring"],
+    name: "ring_test_tests_pbkdf2_tests",
+    defaults: ["ring_test_defaults"],
+    host_supported: true,
     srcs: ["tests/pbkdf2_tests.rs"],
     test_options: {
         unit_test: true,
@@ -257,14 +215,9 @@ rust_test_host {
 }
 
 rust_test {
-    name: "ring_device_test_tests_pbkdf2_tests",
-    defaults: ["ring_defaults_ring"],
-    srcs: ["tests/pbkdf2_tests.rs"],
-}
-
-rust_test_host {
-    name: "ring_host_test_tests_quic_tests",
-    defaults: ["ring_defaults_ring"],
+    name: "ring_test_tests_quic_tests",
+    defaults: ["ring_test_defaults"],
+    host_supported: true,
     srcs: ["tests/quic_tests.rs"],
     test_options: {
         unit_test: true,
@@ -272,14 +225,9 @@ rust_test_host {
 }
 
 rust_test {
-    name: "ring_device_test_tests_quic_tests",
-    defaults: ["ring_defaults_ring"],
-    srcs: ["tests/quic_tests.rs"],
-}
-
-rust_test_host {
-    name: "ring_host_test_tests_rand_tests",
-    defaults: ["ring_defaults_ring"],
+    name: "ring_test_tests_rand_tests",
+    defaults: ["ring_test_defaults"],
+    host_supported: true,
     srcs: ["tests/rand_tests.rs"],
     test_options: {
         unit_test: true,
@@ -287,14 +235,9 @@ rust_test_host {
 }
 
 rust_test {
-    name: "ring_device_test_tests_rand_tests",
-    defaults: ["ring_defaults_ring"],
-    srcs: ["tests/rand_tests.rs"],
-}
-
-rust_test_host {
-    name: "ring_host_test_tests_rsa_tests",
-    defaults: ["ring_defaults_ring"],
+    name: "ring_test_tests_rsa_tests",
+    defaults: ["ring_test_defaults"],
+    host_supported: true,
     srcs: ["tests/rsa_tests.rs"],
     test_options: {
         unit_test: true,
@@ -302,24 +245,13 @@ rust_test_host {
 }
 
 rust_test {
-    name: "ring_device_test_tests_rsa_tests",
-    defaults: ["ring_defaults_ring"],
-    srcs: ["tests/rsa_tests.rs"],
-}
-
-rust_test_host {
-    name: "ring_host_test_tests_signature_tests",
-    defaults: ["ring_defaults_ring"],
+    name: "ring_test_tests_signature_tests",
+    defaults: ["ring_test_defaults"],
+    host_supported: true,
     srcs: ["tests/signature_tests.rs"],
     test_options: {
         unit_test: true,
     },
-}
-
-rust_test {
-    name: "ring_device_test_tests_signature_tests",
-    defaults: ["ring_defaults_ring"],
-    srcs: ["tests/signature_tests.rs"],
 }
 
 cc_library_static {
@@ -437,10 +369,3 @@ cc_library_static {
     ],
     min_sdk_version: "29",
 }
-
-// dependent_library ["feature_list"]
-//   cc-1.0.69
-//   libc-0.2.98
-//   once_cell-1.8.0 "alloc,race,std"
-//   spin-0.5.2
-//   untrusted-0.7.1
