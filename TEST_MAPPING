@@ -13,6 +13,9 @@
       "name": "apkdmverity.test"
     },
     {
+      "name": "authfs_device_test_src_lib"
+    },
+    {
       "name": "doh_unit_test"
     },
     {
@@ -86,6 +89,9 @@
   "presubmit-rust": [
     {
       "name": "apkdmverity.test"
+    },
+    {
+      "name": "authfs_device_test_src_lib"
     },
     {
       "name": "doh_unit_test"
