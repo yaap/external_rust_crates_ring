@@ -8,6 +8,24 @@
       "path": "external/rust/crates/webpki"
     }
   ],
+  "postsubmit": [
+    {
+      "name": "ring_test_src_lib",
+      "options": [
+        {
+          "test-timeout": "100000"
+        }
+      ]
+    },
+    {
+      "name": "ring_test_tests_digest_tests",
+      "options": [
+        {
+          "test-timeout": "600000"
+        }
+      ]
+    }
+  ],
   "presubmit": [
     {
       "name": "apkdmverity.test"
@@ -31,14 +49,6 @@
       "name": "microdroid_manager_test"
     },
     {
-      "name": "ring_test_src_lib",
-      "options": [
-        {
-          "test-timeout": "100000"
-        }
-      ]
-    },
-    {
       "name": "ring_test_tests_aead_tests"
     },
     {
@@ -46,14 +56,6 @@
     },
     {
       "name": "ring_test_tests_constant_time_tests"
-    },
-    {
-      "name": "ring_test_tests_digest_tests",
-      "options": [
-        {
-          "test-timeout": "600000"
-        }
-      ]
     },
     {
       "name": "ring_test_tests_ecdsa_tests"
@@ -109,14 +111,6 @@
       "name": "microdroid_manager_test"
     },
     {
-      "name": "ring_test_src_lib",
-      "options": [
-        {
-          "test-timeout": "100000"
-        }
-      ]
-    },
-    {
       "name": "ring_test_tests_aead_tests"
     },
     {
@@ -124,14 +118,6 @@
     },
     {
       "name": "ring_test_tests_constant_time_tests"
-    },
-    {
-      "name": "ring_test_tests_digest_tests",
-      "options": [
-        {
-          "test-timeout": "600000"
-        }
-      ]
     },
     {
       "name": "ring_test_tests_ecdsa_tests"
