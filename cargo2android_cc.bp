@@ -91,9 +91,7 @@ cc_library_static {
     local_include_dirs: ["include"],
     apex_available: [
         "//apex_available:platform",
-        "com.android.compos",
         "com.android.resolv",
-        "com.android.virt",
     ],
     min_sdk_version: "29",
 }
@@ -107,9 +105,7 @@ cc_library_static {
     local_include_dirs: ["include"],
     apex_available: [
         "//apex_available:platform",
-        "com.android.compos",
         "com.android.resolv",
-        "com.android.virt",
     ],
     min_sdk_version: "29",
 }
