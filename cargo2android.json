@@ -2,9 +2,7 @@
   "add-toplevel-block": "cargo2android_cc.bp",
   "apex-available": [
     "//apex_available:platform",
-    "com.android.compos",
     "com.android.resolv",
-    "com.android.virt"
   ],
   "dependencies": true,
   "device": true,
