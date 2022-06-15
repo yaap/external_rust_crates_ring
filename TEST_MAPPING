@@ -31,9 +31,6 @@
       "name": "doh_unit_test"
     },
     {
-      "name": "microdroid_manager_test"
-    },
-    {
       "name": "ring_test_tests_aead_tests"
     },
     {
@@ -73,9 +70,6 @@
   "presubmit-rust": [
     {
       "name": "doh_unit_test"
-    },
-    {
-      "name": "microdroid_manager_test"
     },
     {
       "name": "ring_test_tests_aead_tests"
