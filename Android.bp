@@ -271,6 +271,7 @@ rust_test {
 
 cc_library_static {
     name: "libring-core",
+    defaults: ["rust_static_cc_lib_defaults"],
     host_supported: true,
     srcs: [
         "crypto/cpu-intel.c",
@@ -373,6 +374,7 @@ cc_library_static {
 
 cc_library_static {
     name: "libring-test",
+    defaults: ["rust_static_cc_lib_defaults"],
     host_supported: true,
     srcs: [
         "crypto/constant_time_test.c",
