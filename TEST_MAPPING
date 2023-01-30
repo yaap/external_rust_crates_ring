@@ -6,6 +6,9 @@
     },
     {
       "path": "external/rust/crates/webpki"
+    },
+    {
+      "path": "packages/modules/DnsResolver"
     }
   ],
   "postsubmit": [
@@ -27,9 +30,6 @@
     }
   ],
   "presubmit": [
-    {
-      "name": "doh_unit_test"
-    },
     {
       "name": "ring_test_tests_aead_tests"
     },
@@ -68,9 +68,6 @@
     }
   ],
   "presubmit-rust": [
-    {
-      "name": "doh_unit_test"
-    },
     {
       "name": "ring_test_tests_aead_tests"
     },
