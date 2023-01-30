@@ -68,7 +68,8 @@ macro_rules! prefixed_item {
     } => {
         prefixed_item! {
             $attr
-            { concat!(env!("RING_CORE_PREFIX"), stringify!($name)) }
+            //{ concat!(env!("RING_CORE_PREFIX"), stringify!($name)) }
+            { concat!("ring_core_android_platform_", stringify!($name)) }
             { $( $item )+ }
         }
     };
