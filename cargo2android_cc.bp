@@ -95,6 +95,8 @@ cc_library_static {
         "//apex_available:platform",
         "com.android.resolv",
     ],
+    vendor_available: true,
+    product_available: true,
     min_sdk_version: "29",
 }
 
@@ -109,5 +111,7 @@ cc_library_static {
         "//apex_available:platform",
         "com.android.resolv",
     ],
+    vendor_available: true,
+    product_available: true,
     min_sdk_version: "29",
 }
