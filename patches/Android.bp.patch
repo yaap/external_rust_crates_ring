@@ -1,5 +1,5 @@
 diff --git a/Android.bp b/Android.bp
-index 2fffd32fb..eb06e7878 100644
+index 9690d3d..9c28b81 100644
 --- a/Android.bp
 +++ b/Android.bp
 @@ -56,9 +56,9 @@ rust_library {
@@ -15,7 +15,24 @@ index 2fffd32fb..eb06e7878 100644
      ],
      apex_available: [
          "//apex_available:platform",
-@@ -94,9 +94,9 @@ rust_test {
+@@ -82,12 +80,12 @@ rust_library_rlib {
+     rustlibs: [
+         "liblibc",
+         "libonce_cell",
+-        "libspin",
++        "libspin_nostd",
+         "libuntrusted",
+     ],
+-    static_libs: [
+-        "libring_core_0_17_0_alpha_11_",
+-        "libring_core_0_17_0_alpha_11_test",
++    whole_static_libs: [
++        "libring-core",
++        "libring-test",
+     ],
+     apex_available: [
+         "//apex_available:platform",
+@@ -131,9 +129,9 @@ rust_test {
          "libspin",
          "libuntrusted",
      ],
@@ -27,4 +44,3 @@ index 2fffd32fb..eb06e7878 100644
 +        "libring-test",
      ],
  }
- 
