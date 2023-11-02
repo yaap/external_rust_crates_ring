@@ -14,5 +14,17 @@
   "whole-static-libs": [
     "ring-core",
     "ring-test"
+  ],
+  "variants": [
+    {},
+    {
+      "no-host": true,
+      "suffix": "_nostd",
+      "no-std": true,
+      "alloc": false,
+      "force-rlib": true,
+      "features": "once_cell",
+      "tests": false
+    }
   ]
 }
