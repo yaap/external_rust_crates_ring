@@ -49,6 +49,7 @@ rust_library {
         "once_cell",
         "std",
     ],
+    cfgs: ["soong"],
     rustlibs: [
         "liblibc",
         "libonce_cell",
@@ -66,7 +67,6 @@ rust_library {
     product_available: true,
     vendor_available: true,
     min_sdk_version: "29",
-    cfgs: ["soong"],
 }
 
 rust_test {
@@ -89,6 +89,7 @@ rust_test {
         "once_cell",
         "std",
     ],
+    cfgs: ["soong"],
     rustlibs: [
         "liblibc",
         "libonce_cell",
@@ -99,7 +100,6 @@ rust_test {
         "libring-core",
         "libring-test",
     ],
-    cfgs: ["soong"],
 }
 
 rust_test {
@@ -122,6 +122,7 @@ rust_test {
         "once_cell",
         "std",
     ],
+    cfgs: ["soong"],
     rustlibs: [
         "liblibc",
         "libonce_cell",
@@ -129,7 +130,6 @@ rust_test {
         "libspin",
         "libuntrusted",
     ],
-    cfgs: ["soong"],
 }
 
 rust_test {
@@ -152,6 +152,7 @@ rust_test {
         "once_cell",
         "std",
     ],
+    cfgs: ["soong"],
     rustlibs: [
         "liblibc",
         "libonce_cell",
@@ -159,7 +160,6 @@ rust_test {
         "libspin",
         "libuntrusted",
     ],
-    cfgs: ["soong"],
 }
 
 rust_test {
@@ -182,6 +182,7 @@ rust_test {
         "once_cell",
         "std",
     ],
+    cfgs: ["soong"],
     rustlibs: [
         "liblibc",
         "libonce_cell",
@@ -189,7 +190,6 @@ rust_test {
         "libspin",
         "libuntrusted",
     ],
-    cfgs: ["soong"],
 }
 
 rust_test {
@@ -212,6 +212,7 @@ rust_test {
         "once_cell",
         "std",
     ],
+    cfgs: ["soong"],
     rustlibs: [
         "liblibc",
         "libonce_cell",
@@ -219,7 +220,6 @@ rust_test {
         "libspin",
         "libuntrusted",
     ],
-    cfgs: ["soong"],
 }
 
 rust_test {
@@ -242,6 +242,7 @@ rust_test {
         "once_cell",
         "std",
     ],
+    cfgs: ["soong"],
     rustlibs: [
         "liblibc",
         "libonce_cell",
@@ -249,7 +250,6 @@ rust_test {
         "libspin",
         "libuntrusted",
     ],
-    cfgs: ["soong"],
 }
 
 rust_test {
@@ -272,6 +272,7 @@ rust_test {
         "once_cell",
         "std",
     ],
+    cfgs: ["soong"],
     rustlibs: [
         "liblibc",
         "libonce_cell",
@@ -279,7 +280,6 @@ rust_test {
         "libspin",
         "libuntrusted",
     ],
-    cfgs: ["soong"],
 }
 
 rust_test {
@@ -302,6 +302,7 @@ rust_test {
         "once_cell",
         "std",
     ],
+    cfgs: ["soong"],
     rustlibs: [
         "liblibc",
         "libonce_cell",
@@ -309,7 +310,6 @@ rust_test {
         "libspin",
         "libuntrusted",
     ],
-    cfgs: ["soong"],
 }
 
 rust_test {
@@ -332,6 +332,7 @@ rust_test {
         "once_cell",
         "std",
     ],
+    cfgs: ["soong"],
     rustlibs: [
         "liblibc",
         "libonce_cell",
@@ -339,7 +340,6 @@ rust_test {
         "libspin",
         "libuntrusted",
     ],
-    cfgs: ["soong"],
 }
 
 rust_test {
@@ -362,6 +362,7 @@ rust_test {
         "once_cell",
         "std",
     ],
+    cfgs: ["soong"],
     rustlibs: [
         "liblibc",
         "libonce_cell",
@@ -369,7 +370,6 @@ rust_test {
         "libspin",
         "libuntrusted",
     ],
-    cfgs: ["soong"],
 }
 
 rust_test {
@@ -392,6 +392,7 @@ rust_test {
         "once_cell",
         "std",
     ],
+    cfgs: ["soong"],
     rustlibs: [
         "liblibc",
         "libonce_cell",
@@ -399,7 +400,6 @@ rust_test {
         "libspin",
         "libuntrusted",
     ],
-    cfgs: ["soong"],
 }
 
 rust_test {
@@ -422,6 +422,7 @@ rust_test {
         "once_cell",
         "std",
     ],
+    cfgs: ["soong"],
     rustlibs: [
         "liblibc",
         "libonce_cell",
@@ -429,7 +430,6 @@ rust_test {
         "libspin",
         "libuntrusted",
     ],
-    cfgs: ["soong"],
 }
 
 rust_test {
@@ -452,6 +452,7 @@ rust_test {
         "once_cell",
         "std",
     ],
+    cfgs: ["soong"],
     rustlibs: [
         "liblibc",
         "libonce_cell",
@@ -459,7 +460,6 @@ rust_test {
         "libspin",
         "libuntrusted",
     ],
-    cfgs: ["soong"],
 }
 
 rust_test {
@@ -482,6 +482,7 @@ rust_test {
         "once_cell",
         "std",
     ],
+    cfgs: ["soong"],
     rustlibs: [
         "liblibc",
         "libonce_cell",
@@ -489,7 +490,6 @@ rust_test {
         "libspin",
         "libuntrusted",
     ],
-    cfgs: ["soong"],
 }
 
 rust_library_rlib {
@@ -500,6 +500,7 @@ rust_library_rlib {
     srcs: ["src/lib.rs"],
     edition: "2018",
     features: ["once_cell"],
+    cfgs: ["soong"],
     rustlibs: [
         "liblibc",
         "libonce_cell",
@@ -523,7 +524,6 @@ rust_library_rlib {
     product_available: true,
     vendor_available: true,
     min_sdk_version: "29",
-    cfgs: ["soong"],
 }
 
 cc_library_static {
